@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Nyhau</title>
+    <title>Nyhau Chinese</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= render "common/navbar" %>
     <%= yield %>
+    <%= render "common/footer" %>
   </body>
 </html>
