@@ -13,6 +13,8 @@ class Level < ApplicationRecord
   validates_uniqueness_of :friendly_id
   validates_format_of :friendly_id, :with => /\A[a-z0-9\-]+\z/
 
+  has_many :challenges
+
   protected
 
   def generate_friendly_id

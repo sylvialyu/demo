@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170803055643) do
+ActiveRecord::Schema.define(version: 20170803132635) do
+
+  create_table "challenges", force: :cascade do |t|
+    t.string   "title"
+    t.string   "subtitle"
+    t.text     "goal"
+    t.text     "content"
+    t.text     "task"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string   "title"
@@ -23,9 +33,11 @@ ActiveRecord::Schema.define(version: 20170803055643) do
   create_table "levels", force: :cascade do |t|
     t.string   "title"
     t.string   "image"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "friendly_id"
+    t.string   "topic_name"
+    t.string   "subtopic_name"
     t.index ["friendly_id"], name: "index_levels_on_friendly_id", unique: true
   end
 

@@ -6,6 +6,7 @@ class LevelsController < ApplicationController
 
   def show
     @level = Level.find_by_friendly_id!(params[:id])
+    @challenges = @level.challenges
   end
 
 end
