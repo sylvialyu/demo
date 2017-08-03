@@ -5,7 +5,7 @@ class LevelsController < ApplicationController
   end
 
   def show
-    @level = Level.find(params[:id])
+    @level = Level.find_by_friendly_id!(params[:id])
   end
 
 end

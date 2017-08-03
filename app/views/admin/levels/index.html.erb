@@ -18,7 +18,7 @@
         <td>
           <%= link_to level_path(level) do %>
             <% if level.image.present? %>
-              <%= image_tag(level.image.thumb.url) %>
+              <%= image_tag(level.image.small.url) %>
             <% else %>
               <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
             <% end %>

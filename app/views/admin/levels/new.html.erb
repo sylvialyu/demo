@@ -2,14 +2,6 @@
 
 <%= simple_form_for [:admin, @level] do |f| %>
 
-<div class="group">
-  <%= f.input :title, class: "form-control" %>
-</div>
-
-<div class="group">
-  <%= f.input :image, as: :file, class: "form-control" %>
-</div>
-
-<%= f.submit "Submit", data: { disable_with: "Submitting..." }, class: "btn btn-primary" %>
+  <%= render :partial => "form", :locals => { :f => f } %>
 
 <% end %>
