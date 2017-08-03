@@ -1,0 +1,27 @@
+<div class="pull-right" style="padding-bottom: 20px;">
+  <%= link_to("Create a New Level", new_admin_level_path, class: "btn btn-primary btn-sm") %>
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Level Pic</th>
+      <th>Level Name</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @levels.each do |level| %>
+      <tr>
+        <td><%= level.id %></td>
+        <td><%= link_to(level.id, level_path(level)) %></td>
+        <td><%= link_to(level.title, level_path(level)) %></td>
+        <td>
+          <%= link_to("Edit", edit_admin_level_path(level), class: "btn btn-primary btn-xs") %>
+          <%= link_to("Delete", admin_level_path(level), method: :delete, class: "btn btn-danger btn-xs", data: { confirm: "Are you sure?" }) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
