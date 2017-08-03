@@ -15,7 +15,15 @@
     <% @levels.each do |level| %>
       <tr>
         <td><%= level.id %></td>
-        <td><%= link_to(level.id, level_path(level)) %></td>
+        <td>
+          <%= link_to level_path(level) do %>
+            <% if level.image.present? %>
+              <%= image_tag(level.image.thumb.url) %>
+            <% else %>
+              <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+            <% end %>
+          <% end %>
+        </td>
         <td><%= link_to(level.title, level_path(level)) %></td>
         <td>
           <%= link_to("Edit", edit_admin_level_path(level), class: "btn btn-primary btn-xs") %>
