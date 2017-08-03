@@ -1,13 +1,15 @@
-<div class="row">
-  <% @levels.each do |level| %>
-    <div class="col-md-4">
-      <%= link_to level_path(level) do %>
-        <% if level.image.present? %>
-          <%= image_tag(level.image.thumb.url) %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+<div class="col-md-10 col-centered">
+  <div class="row">
+    <% @levels.each do |level| %>
+      <div class="col-md-4">
+        <%= link_to level_path(level) do %>
+          <% if level.image.present? %>
+            <%= image_tag(level.image.thumb.url) %>
+          <% else %>
+            <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-  <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

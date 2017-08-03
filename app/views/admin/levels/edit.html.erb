@@ -3,7 +3,7 @@
 <%= simple_form_for [:admin, @level] do |f| %>
 
 <% if @level.image.present? %>
-  <span>Current Pic</span> <br>
+  <b>Current Pic</b> <br>
   <%= image_tag(@level.image.thumb) %>
 <% end %>
 
