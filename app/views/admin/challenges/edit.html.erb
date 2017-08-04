@@ -1,0 +1,7 @@
+<h2>Edit Challenges - Level <%= @level.title %></h2>
+
+<%= simple_form_for [:admin, @level, @challenge] do |f| %>
+
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+<% end %>

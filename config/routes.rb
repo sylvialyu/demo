@@ -5,9 +5,13 @@ Rails.application.routes.draw do
   root 'levels#index'
 
   namespace :admin do
-    resources :levels
+    resources :levels do
+      resources :challenges
+    end
   end
 
-  resources :levels
+  resources :levels do
+    resources :challenges
+  end
 
 end

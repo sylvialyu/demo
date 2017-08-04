@@ -1,1 +1,18 @@
 <h1>Learning Progress</h1>
+
+  <table class="table table-striped">
+    <% @challenges.each do |challenge| %>
+
+    <thead>
+      <tr>
+        <td><%= challenge.title %></td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= challenge.subtitle %></td>
+      </tr>
+    </tbody>
+    <% end %>
+
+  </table>

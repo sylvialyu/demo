@@ -5,16 +5,15 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>#</th>
       <th>Level Pic</th>
       <th>Level Name</th>
+      <th>Go to Challenges</th>
       <th>Options</th>
     </tr>
   </thead>
   <tbody>
     <% @levels.each do |level| %>
       <tr>
-        <td><%= level.id %></td>
         <td>
           <%= link_to level_path(level) do %>
             <% if level.image.present? %>
@@ -24,7 +23,8 @@
             <% end %>
           <% end %>
         </td>
-        <td><%= link_to(level.title, level_path(level)) %></td>
+        <td><%= link_to(level.title, edit_admin_level_path(level)) %></td>
+        <td><%= link_to("Challenges", admin_level_challenges_path(level), class: "btn btn-warning btn-xs") %></td>
         <td>
           <%= link_to("Edit", edit_admin_level_path(level), class: "btn btn-primary btn-xs") %>
           <%= link_to("Delete", admin_level_path(level), method: :delete, class: "btn btn-danger btn-xs", data: { confirm: "Are you sure?" }) %>

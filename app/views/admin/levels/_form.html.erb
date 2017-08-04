@@ -12,4 +12,7 @@
   <%= f.input :image, as: :file, class: "form-control" %>
 </div>
 
-<%= f.submit "Submit", data: { disable_with: "Submitting..." }, class: "btn btn-primary" %>
+<div class="group">
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." }, class: "btn btn-primary" %>
+  <%= link_to("Go to Challenges", admin_level_challenges_path(@level), class: "btn btn-warning") %>
+</div>

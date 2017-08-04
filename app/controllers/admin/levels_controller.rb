@@ -1,6 +1,7 @@
 class Admin::LevelsController < ApplicationController
   before_action :authenticate_user!
   before_action :require_admin!
+  layout "admin"
 
   def index
     @levels = Level.all
