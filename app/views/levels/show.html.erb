@@ -1,17 +1,16 @@
 <h2>Learning Progress</h2>
 
-  <table class="table table-striped">
-    <% @challenges.each do |challenge| %>
-      <thead>
-        <tr>
-          <th><%= challenge.title %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><%= link_to(challenge.subtitle, level_challenge_path(@level, challenge)) %></td>
-        </tr>
-      </tbody>
-    <% end %>
-
-  </table>
+<table class="table table-striped">
+  <% @challenges.each do |challenge| %>
+    <thead>
+      <tr>
+        <th><%= challenge.title %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= link_to(challenge.subtitle, level_challenge_path(@level, challenge)) %></td>
+      </tr>
+    </tbody>
+  <% end %>
+</table>

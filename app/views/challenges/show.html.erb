@@ -1,4 +1,4 @@
-<h2><%= @challenge.subtitle %></h2>
+<h2><%= link_to(@challenge.subtitle, level_path(@level)) %></h2>
 
 <% if @challenge.goal.present? %>
   <h3>Goal</h3>

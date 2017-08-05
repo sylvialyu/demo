@@ -1,7 +1,7 @@
 <div class="col-md-10 col-centered">
   <div class="row">
     <% @levels.each do |level| %>
-      <div class="col-md-4">
+      <div class="col-md-4" style="margin-bottom: 40px;">
         <%= link_to level_path(level) do %>
           <% if level.image.present? %>
             <%= image_tag(level.image.thumb.url) %>
