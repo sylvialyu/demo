@@ -7,5 +7,17 @@
 </div>
 
 <div class="group">
+  <%= f.input :goal, class: "form-control" %>
+</div>
+
+<div class="group">
+  <%= f.input :content, class: "form-control" %>
+</div>
+
+<div class="task">
+  <%= f.input :task, class: "form-control" %>
+</div>
+
+<div class="group">
   <%= f.submit "Submit", data: {disable_with: "Submitting..."}, class: "btn btn-primary" %>
 </div>

@@ -1,0 +1,19 @@
+<h2><%= @challenge.subtitle %></h2>
+
+<% if @challenge.goal.present? %>
+  <h3>Goal</h3>
+  <hr>
+  <p><%= @challenge.goal %></p>
+<% end %>
+
+<br>
+
+<p><%= @challenge.content %></p>
+
+<br>
+
+<% if @challenge.task.present? %>
+  <h3>Task</h3>
+  <hr>
+  <p><%= @challenge.task %></p>
+<% end %>

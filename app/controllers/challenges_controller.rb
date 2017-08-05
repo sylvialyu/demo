@@ -2,7 +2,7 @@ class ChallengesController < ApplicationController
 
   def show
     @level = Level.find_by_friendly_id!(params[:level_id])
-    @challenges = @level.challenges
+    @challenge = Challenge.find(params[:id])
   end
 
 
