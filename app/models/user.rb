@@ -7,5 +7,13 @@ class User < ApplicationRecord
   def is_admin?
     self.role == "admin"
   end
-  
+
+  def display_name
+    if self.username.present?
+      self.username
+    else
+      self.email.split("@").first
+    end
+  end
+
 end
