@@ -2,8 +2,13 @@
 
 <%= simple_form_for @user do |f| %>
 
+<% if @user.avatar.present? %>
+  <b>My Image</b> <br>
+  <%= image_tag(@user.avatar) %>
+<% end %>
+
   <div class="form-group">
-    <%= f.input :avatar %>
+    <%= f.input :avatar, label: "Use another pic", as: :file %>
   </div>
 
   <div class="form-group">
