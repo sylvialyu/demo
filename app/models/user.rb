@@ -18,4 +18,7 @@ class User < ApplicationRecord
     end
   end
 
+  GENDER = ["Male", "Female"]
+  validates_inclusion_of :gender, :in => GENDER
+
 end

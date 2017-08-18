@@ -16,7 +16,13 @@
   </div>
 
   <div class="form-group">
-    <%= f.input :gender %>
+    <%= f.label :gender %>
+    <% User::GENDER.each do |gender| %>
+      <label>
+        <%= f.radio_button :gender, gender %>
+        <%= t(gender, :scope => "user.gender") %>
+      </label>
+    <% end %>
   </div>
 
   <div class="form-group">
