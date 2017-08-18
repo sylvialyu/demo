@@ -1,19 +1,25 @@
 <h2><%= link_to(@challenge.subtitle, level_path(@level)) %></h2>
 
-<% if @challenge.goal.present? %>
-  <h3>Goal</h3>
-  <hr>
-  <p><%= @challenge.goal %></p>
-<% end %>
+<div>
+  <% if @challenge.goal.present? %>
+    <h3>Goal</h3>
+    <hr>
+    <p><%= @challenge.goal %></p>
+  <% end %>
+</div>
 
 <br>
 
-<p><%= sanitize @challenge.content %></p>
+<div>
+  <p><%= sanitize @challenge.content %></p>
+</div>
 
 <br>
 
-<% if @challenge.task.present? %>
-  <h3>Task</h3>
-  <hr>
-  <p><%= @challenge.task %></p>
-<% end %>
+<div>
+  <% if @challenge.task.present? %>
+    <h3>Task</h3>
+    <hr>
+    <p><%= @challenge.task %></p>
+  <% end %>
+</div>
