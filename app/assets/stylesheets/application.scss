@@ -20,13 +20,54 @@
  @import 'font-awesome';
 
 
-// 让内容居中
+ //---------Navbar---------
+
+ .navbar-default {
+     background-color: #273748;
+     border-color: #273748;
+     margin-bottom: 0;
+     border-radius: 0;
+ }
+
+ .navbar-default .navbar-brand {
+     color: #fccf2f;
+     padding: 10px 15px;
+     line-height: 30px;
+ }
+
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+     color: #fff;
+     background-color: transparent;
+ }
+
+ .navbar-default .navbar-nav > li > a {
+     color: #fccf2f;
+ }
+
+ .navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+     color: #fff;
+     background-color: transparent;
+ }
+
+ .navbar-default .navbar-nav > .active > a,
+ .navbar-default .navbar-nav > .active > a:hover,
+ .navbar-default .navbar-nav > .active > a:focus {
+     color: #FF6F00;
+     background-color: #FFE0B2;
+ }
+
+ .navbar-default .navbar-nav > .open > a,
+ .navbar-default .navbar-nav > .open > a:focus,
+ .navbar-default .navbar-nav > .open > a:hover {
+     background-color: #FFE0B2;
+     color: #212121;
+ }
+
+
+//---------让内容居中---------
  .col-centered {
   float: none;
   margin: 0 auto;
-}
-
-// 个人战斗值表
-.growth {
-  border: 10px #000;
 }
