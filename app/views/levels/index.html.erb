@@ -1,15 +1,33 @@
-<div class="col-md-10 col-centered">
+<div class="col-md-11 col-centered">
   <div class="row">
-    <% @levels.each do |level| %>
-      <div class="col-md-4" style="margin-bottom: 40px;">
-        <%= link_to level_path(level) do %>
-          <% if level.image.present? %>
-            <%= image_tag(level.image.thumb.url) %>
-          <% else %>
-            <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-          <% end %>
+
+    <div class="col-md-9">
+      <div class="row">
+        <% @levels.each do |level| %>
+          <div class="col-md-4" style="margin-bottom: 40px;">
+            <%= link_to level_path(level) do %>
+              <% if level.image.present? %>
+                <%= image_tag(level.image.thumb.url) %>
+              <% else %>
+                <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+              <% end %>
+            <% end %>
+          </div>
         <% end %>
       </div>
-    <% end %>
+    </div>
+
+    <div class="col-md-3">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Board of Personal Growth</h3>
+        </div>
+        <div class="panel-body">
+          经验值：XXXX；<br>
+          战斗力：XXXX；
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
