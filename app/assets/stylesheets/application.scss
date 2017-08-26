@@ -30,40 +30,47 @@
  }
 
  .navbar-default .navbar-brand {
-     color: #fccf2f;
+     color: #FECB2F;
      padding: 10px 15px;
      line-height: 30px;
  }
 
  .navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-     color: #fff;
+     color: #FFF;
      background-color: transparent;
  }
 
  .navbar-default .navbar-nav > li > a {
-     color: #fccf2f;
+     color: #FECB2F;
  }
 
  .navbar-default .navbar-nav > li > a:hover,
  .navbar-default .navbar-nav > li > a:focus {
-     color: #fff;
+     color: #FFF;
      background-color: transparent;
  }
 
  .navbar-default .navbar-nav > .active > a,
  .navbar-default .navbar-nav > .active > a:hover,
  .navbar-default .navbar-nav > .active > a:focus {
-     color: #FF6F00;
-     background-color: #FFE0B2;
+     color: #FECB2F;
+     background-color: transparent;
  }
 
  .navbar-default .navbar-nav > .open > a,
  .navbar-default .navbar-nav > .open > a:focus,
  .navbar-default .navbar-nav > .open > a:hover {
-     background-color: #FFE0B2;
      color: #212121;
+     background-color: transparent;
  }
+
+ .navbar-brand > img {  // 设置 navbar logo 样式
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    width: 102.4px; //定制图片宽度
+    height: 31.2px; //定制图片高度
+}
 
 
 //---------让内容居中---------
