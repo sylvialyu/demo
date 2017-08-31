@@ -20,7 +20,21 @@
  @import 'font-awesome';
 
 
- //---------Navbar---------
+//---------基础设置---------
+
+html {
+ overflow-x: hidden; overflow-y: auto; //网页在x轴上全屏显示，让横滚动轴消失
+ font-size: 14px;
+}
+
+body {
+font-family: 'Open Sans', sans-serif;
+color: #222;
+font-size: 14px;
+}
+
+
+//---------Navbar---------
 
  .navbar-default {
      background-color: #273748;
@@ -30,31 +44,31 @@
  }
 
  .navbar-default .navbar-brand {
-     color: #FECB2F;
+     color: #FFF;
      padding: 10px 15px;
      line-height: 30px;
  }
 
  .navbar-default .navbar-brand:hover,
  .navbar-default .navbar-brand:focus {
-     color: #FFF;
+     color: #FECB2F;
      background-color: transparent;
  }
 
  .navbar-default .navbar-nav > li > a {
-     color: #FECB2F;
+     color: #FFF;
  }
 
  .navbar-default .navbar-nav > li > a:hover,
  .navbar-default .navbar-nav > li > a:focus {
-     color: #FFF;
+     color: #FECB2F;
      background-color: transparent;
  }
 
  .navbar-default .navbar-nav > .active > a,
  .navbar-default .navbar-nav > .active > a:hover,
  .navbar-default .navbar-nav > .active > a:focus {
-     color: #FECB2F;
+     color: #FFF;
      background-color: transparent;
  }
 

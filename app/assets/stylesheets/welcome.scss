@@ -1,3 +1,48 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+//---------Box---------
+
+.box {
+   background: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("header");
+  //  background: rgba(34,34,34,0.7);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center center;
+   opacity: 0.9;
+   padding-top: 120px;
+   padding-bottom: 80px;
+   margin-bottom: 50px;
+
+   .title {
+       font-size: 36px;
+       text-align: center;
+       color: #fff;
+       margin-bottom: 80px;
+       font-weight: 400;
+       letter-spacing: 3px;
+       line-height: 13px;
+       text-transform: capitalize;
+       margin-top: 100px;
+   }
+
+   .slogan {
+       color: #fff;
+       margin-top: 10px;
+       margin-bottom: 50px;
+       text-align: center;
+       font-size: 25px;
+       top: 12px;
+       letter-spacing: 0.6px;
+       line-height: 50px;
+       font-weight: 300;
+   }
+
+   .lead {
+       margin-bottom: 60px;
+       text-align: center;
+       color: white;
+   }
+}
