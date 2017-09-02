@@ -20,7 +20,7 @@
  @import 'font-awesome';
 
 
-//---------基础设置---------
+//---------Basic Setting---------
 
 html {
  overflow-x: hidden; overflow-y: auto; //网页在x轴上全屏显示，让横滚动轴消失
@@ -44,7 +44,7 @@ font-size: 14px;
  }
 
  .navbar-default .navbar-brand {
-     color: #FFF;
+     color: #FECB2F;
      padding: 10px 15px;
      line-height: 30px;
  }
@@ -84,6 +84,18 @@ font-size: 14px;
     margin-right: 10px; //图片和链接文字拉开一点距离
     width: 102.4px; //定制图片宽度
     height: 31.2px; //定制图片高度
+}
+
+
+//---------Footer---------
+
+footer {
+    color: #FFF;
+}
+
+footer .footer-below {
+    padding: 20px 0 15px 0;
+    background-color: #273748;
 }
 
 
