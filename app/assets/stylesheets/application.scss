@@ -35,6 +35,16 @@ font-size: 14px;
 
 
 //---------Navbar---------
+ @media (min-width: 768px) {
+   .navbar {
+     border-radius: 0;
+   }
+
+   .navbar-nav > li > a {
+     padding-top: 16px;
+     padding-bottom: 16px;
+  }
+ }
 
  .navbar-default {
      background-color: #273748;
@@ -86,6 +96,13 @@ font-size: 14px;
     height: 31.2px; //定制图片高度
 }
 
+ // .navbar-box {
+ //   background-color: transparent;
+ //   border: 1px solid #FECB2F;
+ //   border-radius: 30px;
+ //   margin: 9px 0 9px 10px;
+ // }
+
 
 //---------Footer---------
 
@@ -99,7 +116,7 @@ footer .footer-below {
 }
 
 
-
+//---------Flash Alert---------
 .alert {
   margin-bottom: 0px;
   border-radius: 0px;
