@@ -89,7 +89,12 @@
 
     h3 {
       font-size: 18px;
-      margin: 10px auto;
+      margin: 20px auto;
+    }
+
+    p {
+      text-align: justify;
+      margin: auto 8px;
     }
 
   }
@@ -126,4 +131,8 @@ img {
   vertical-align: middle;
   max-width: 100%;
   border: 0;
+}
+
+p {
+  margin: 0 0 10px;
 }

@@ -31,6 +31,12 @@ body {
 font-family: 'Open Sans', sans-serif;
 color: #383838;
 font-size: 14px;
+display: flex;
+flex-direction: column;
+}
+
+.flex-content {
+  flex: 1 0 auto;
 }
 
 
@@ -38,6 +44,12 @@ font-size: 14px;
  @media (min-width: 768px) {
    .navbar {
      border-radius: 0;
+     position: relative;
+     z-index: 998;
+   }
+
+   .navbar-content {
+     padding-right: 0;
    }
 
    .navbar-nav > li > a {
