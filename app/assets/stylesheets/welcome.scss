@@ -147,11 +147,10 @@ p {
 }
 
 .welcome-video {
-  margin: 30px 80px 0 80px;
-  padding: 35px 35px 40px 35px;
+  margin: 30px 120px 0 120px;
+  padding: 35px 35px 0px 35px;
   background: #fff;
   border-radius: 20px;
-  position: relative;
   position: relative;
   z-index: 3;
 }
@@ -181,17 +180,78 @@ p {
 
 
 //---------Feedback Section---------
-.sp_card_con {
-  width: 262px;
-  height: 319px;
-  background-color: #FFF;
-  margin: 44px 25px 0 25px;
-  float: left;
-  text-align: center;
-  position: relative;
-  cursor: pointer;
+
+// .page-wrap {
+//   margin: 0 auto;
+//   padding-left: 100px;
+//   padding-right: 100px;
+// }
+
+.testimonials_wrap {
+  padding-top: 10px;
+
+  .g-col-equal {
+    display: flex;
+  }
 }
 
-.index_boxshadow {
-  box-sizing: 0 0 30px rgba(85,182,218,0.2);
+.g-row {
+  width: 100%;
+  clear: both;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.g-col-equal {
+  width: 0;
+  flex: 1 1 0%;
+}
+
+.testimonial {
+  width: 100%;
+  display: flex;
+  padding: 87.5px 37.5px 0;
+
+  .avatar {
+    margin-top: -79px;
+  }
+}
+
+blockquote {
+  margin: 0;
+  display: block;
+  // font-style: italic;
+  text-align: center;
+}
+
+.testimonial_content {
+  width: 100%;
+  padding: 37.5px 25px 20px;
+  border-radius: 17.5px;
+  box-shadow: 0 0 25px 25px rgba(138,138,138,0.1);
+  background-color: #fff;
+  line-height: 50px;
+}
+
+.avatar {
+  display: block;
+  margin: 0 auto 12px;
+  border: 4.5px solid #fff;
+  box-sizing: content-box;
+  border-radius: 100%;
+}
+
+.testimonial_quote {
+  display: block;
+  margin-bottom: 20px;
+  color: #252B2F;
+  font-size: 17px;
+}
+
+.testimonial_cite {
+  margin-bottom: 37.5px;
+  font-style: normal;
+  color: #A7B0B7;
+  font-size: 14px;
 }
