@@ -188,7 +188,7 @@ p {
 // }
 
 .testimonials_wrap {
-  padding-top: 10px;
+  padding-top: 0px;
 
   .g-col-equal {
     display: flex;
@@ -211,7 +211,7 @@ p {
 .testimonial {
   width: 100%;
   display: flex;
-  padding: 87.5px 37.5px 0;
+  padding: 87.5px 37.5px 15px;
 
   .avatar {
     margin-top: -79px;
@@ -223,6 +223,11 @@ blockquote {
   display: block;
   // font-style: italic;
   text-align: center;
+}
+
+blockquote:hover {
+  position: relative;
+  top: -8px;
 }
 
 .testimonial_content {
