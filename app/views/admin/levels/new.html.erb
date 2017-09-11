@@ -1,7 +1,11 @@
-<h2 class="text-center">New Level</h2>
+<div class="frame">
 
-<%= simple_form_for [:admin, @level] do |f| %>
+  <h2 class="text-center">New Level</h2>
 
-  <%= render :partial => "form", :locals => { :f => f } %>
+  <%= simple_form_for [:admin, @level] do |f| %>
 
-<% end %>
+    <%= render :partial => "form", :locals => { :f => f } %>
+
+  <% end %>
+
+</div>

@@ -6,6 +6,9 @@
 
     <%= stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
   </head>
 
   <body>
@@ -17,7 +20,7 @@
           <li class="active"><%= link_to("Levels", admin_levels_path) %></li>
         </ul>
       </div>
-      <div class="col-md-10">
+      <div class="col-md-9">
         <%= yield %>
       </div>
     </div>

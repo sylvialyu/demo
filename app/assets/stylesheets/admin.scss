@@ -29,6 +29,7 @@
 html {
  overflow-x: hidden; overflow-y: auto; //网页在x轴上全屏显示，让横滚动轴消失
  font-size: 14px;
+ height: 100%;
 }
 
 body {
@@ -36,12 +37,19 @@ background-color: #f6f8f8;
 font-family: 'Open Sans', sans-serif;
 color: #383838;
 font-size: 14px;
-display: flex;
 flex-direction: column;
+min-height: 100%;
+display: grid;
+grid-template-rows: 1fr auto;
 }
 
 .flex-content {
   flex: 1 0 auto;
+}
+
+.frame {
+  margin-top: 50px;
+  margin-bottom: 70px;
 }
 
 
@@ -118,6 +126,8 @@ flex-direction: column;
 
 footer {
     color: #FFF;
+    grid-row-start: 2;
+    grid-row-end: 3;
 }
 
 footer .footer-below {
