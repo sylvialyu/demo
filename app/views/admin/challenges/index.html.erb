@@ -1,27 +1,31 @@
-<h1>Challenges - Level <%= @level.title %></h1>
+<div class="frame">
 
-<div class="pull-right" style="padding-bottom: 20px;">
-  <%= link_to("Create a New Challenge", new_admin_level_challenge_path(@level), class: "btn btn-primary btn-sm")%>
-</div>
+  <h1>Challenges - Level <%= @level.title %></h1>
 
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Options</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @challenges.each do |challenge| %>
+  <div class="pull-right" style="padding-bottom: 20px;">
+    <%= link_to("Create a New Challenge", new_admin_level_challenge_path(@level), class: "btn btn-primary btn-sm")%>
+  </div>
+
+  <table class="table table-bordered">
+    <thead>
       <tr>
-        <td><%= challenge.title %></td>
-        <td><%= challenge.subtitle %></td>
-        <td>
-          <%= link_to("Edit", edit_admin_level_challenge_path(@level, challenge), class: "btn btn-primary btn-xs") %>
-          <%= link_to("Delete", admin_level_challenge_path(@level, challenge), method: :delete, class: "btn btn-danger btn-xs", data: {confirm: "Are you sure?"}) %>
-        </td>
+        <th>Title</th>
+        <th>Subtitle</th>
+        <th>Options</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      <% @challenges.each do |challenge| %>
+        <tr>
+          <td><%= challenge.title %></td>
+          <td><%= challenge.subtitle %></td>
+          <td>
+            <%= link_to("Edit", edit_admin_level_challenge_path(@level, challenge), class: "btn btn-primary btn-xs") %>
+            <%= link_to("Delete", admin_level_challenge_path(@level, challenge), method: :delete, class: "btn btn-danger btn-xs", data: {confirm: "Are you sure?"}) %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

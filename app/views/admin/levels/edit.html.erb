@@ -1,12 +1,16 @@
-<h2 class="text-center">Edit Level</h2>
+<div class="frame">
 
-<%= simple_form_for [:admin, @level] do |f| %>
+  <h2 class="text-center">Edit Level</h2>
 
-<% if @level.image.present? %>
-  <b>Current Pic</b> <br>
-  <%= image_tag(@level.image.thumb) %>
-<% end %>
+  <%= simple_form_for [:admin, @level] do |f| %>
 
-<%= render :partial => "form", :locals => { :f => f } %>
+  <% if @level.image.present? %>
+    <b>Current Pic</b> <br>
+    <%= image_tag(@level.image.thumb) %>
+  <% end %>
 
-<% end %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+  <% end %>
+
+</div>
