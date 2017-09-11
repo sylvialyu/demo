@@ -37,10 +37,9 @@ background-color: #f6f8f8;
 font-family: 'Open Sans', sans-serif;
 color: #383838;
 font-size: 14px;
-flex-direction: column;
 min-height: 100%;
-display: grid;
-grid-template-rows: 1fr auto;
+display: flex;
+flex-direction: column;
 }
 
 .flex-content {
@@ -48,7 +47,6 @@ grid-template-rows: 1fr auto;
 }
 
 .frame {
-  // margin-top: 50px;
   margin-bottom: 50px;
 }
 

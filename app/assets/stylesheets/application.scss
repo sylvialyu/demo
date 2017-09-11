@@ -33,15 +33,24 @@ background-color: #f6f8f8;
 font-family: 'Open Sans', sans-serif;
 color: #383838;
 font-size: 14px;
-flex-direction: column;
 min-height: 100%;
-display: grid;
-grid-template-rows: 1fr auto;
+display: flex;
+flex-direction: column;
 }
 
 .flex-content {
   flex: 1 0 auto;
 }
+
+.frame {
+  margin-bottom: 50px;
+}
+
+ .col-centered {  //让内容居中
+  float: none;
+  margin: 0 auto;
+}
+
 
 
 //---------Navbar---------
@@ -134,13 +143,6 @@ footer .footer-below {
   margin-top: -35px;
   padding-top: 15px;
   padding-bottom: 50px;
-}
-
-
-//---------让内容居中---------
- .col-centered {
-  float: none;
-  margin: 0 auto;
 }
 
 

@@ -1,37 +1,41 @@
-<h2>Edit User</h2>
+<div class="frame common-width">
 
-<%= simple_form_for @user do |f| %>
+  <h2>Edit User</h2>
 
-<% if @user.avatar.present? %>
-  <b>My Image</b> <br>
-  <%= image_tag(@user.avatar) %>
-<% end %>
+  <%= simple_form_for @user do |f| %>
 
-  <div class="form-group">
-    <%= f.input :avatar, label: "Use another pic", as: :file %>
-  </div>
+  <% if @user.avatar.present? %>
+    <b>My Image</b> <br>
+    <%= image_tag(@user.avatar) %>
+  <% end %>
 
-  <div class="form-group">
-    <%= f.input :username %>
-  </div>
+    <div class="form-group">
+      <%= f.input :avatar, label: "Use another pic", as: :file %>
+    </div>
 
-  <div class="form-group">
-    <%= f.label :gender %>
-    <% User::GENDER.each do |gender| %>
-      <label>
-        <%= f.radio_button :gender, gender %>
-        <%= t(gender, :scope => "user.gender") %>
-      </label>
-    <% end %>
-  </div>
+    <div class="form-group">
+      <%= f.input :username %>
+    </div>
 
-  <div class="form-group">
-    <%= f.input :email %>
-    <p class="help-block">Cannot be changed once it is confirmed（目前不可更改，看是否要设为可更改）</p>
-  </div>
+    <div class="form-group">
+      <%= f.label :gender %>
+      <% User::GENDER.each do |gender| %>
+        <label>
+          <%= f.radio_button :gender, gender %>
+          <%= t(gender, :scope => "user.gender") %>
+        </label>
+      <% end %>
+    </div>
 
-  <div class="form-group">
-    <%= f.submit "Save", :class => "btn btn-primary" %>
-  </div>
+    <div class="form-group">
+      <%= f.input :email %>
+      <p class="help-block">Cannot be changed once it is confirmed（目前不可更改，看是否要设为可更改）</p>
+    </div>
 
-<% end %>
+    <div class="form-group">
+      <%= f.submit "Save", :class => "btn btn-primary" %>
+    </div>
+
+  <% end %>
+
+</div>
