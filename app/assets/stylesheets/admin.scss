@@ -1,3 +1,146 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'font-awesome';
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+ @import 'font-awesome';
+
+
+//---------Basic Setting---------
+
+html {
+ overflow-x: hidden; overflow-y: auto; //网页在x轴上全屏显示，让横滚动轴消失
+ font-size: 14px;
+}
+
+body {
+background-color: #f6f8f8;
+font-family: 'Open Sans', sans-serif;
+color: #383838;
+font-size: 14px;
+display: flex;
+flex-direction: column;
+}
+
+.flex-content {
+  flex: 1 0 auto;
+}
+
+
+//---------Navbar---------
+ @media (min-width: 768px) {
+   .navbar {
+     border-radius: 0;
+     position: relative;
+     z-index: 998;
+   }
+
+   .navbar-content {
+     padding-right: 0;
+   }
+
+   .navbar-nav > li > a {
+     padding-top: 16px;
+     padding-bottom: 16px;
+  }
+ }
+
+ .navbar-default {
+     background-color: #273748;
+     border-color: #273748;
+     margin-bottom: 35px;
+     border-radius: 0;
+ }
+
+ .navbar-default .navbar-brand {
+     color: #FECB2F;
+     padding: 10px 15px;
+     line-height: 30px;
+ }
+
+ .navbar-default .navbar-brand:hover,
+ .navbar-default .navbar-brand:focus {
+     color: #FECB2F;
+     background-color: transparent;
+ }
+
+ .navbar-default .navbar-nav > li > a {
+     color: #FFF;
+ }
+
+ .navbar-default .navbar-nav > li > a:hover,
+ .navbar-default .navbar-nav > li > a:focus {
+     color: #FECB2F;
+     background-color: transparent;
+ }
+
+ .navbar-default .navbar-nav > .active > a,
+ .navbar-default .navbar-nav > .active > a:hover,
+ .navbar-default .navbar-nav > .active > a:focus {
+     color: #FFF;
+     background-color: transparent;
+ }
+
+ .navbar-default .navbar-nav > .open > a,
+ .navbar-default .navbar-nav > .open > a:focus,
+ .navbar-default .navbar-nav > .open > a:hover {
+     color: #212121;
+     background-color: transparent;
+ }
+
+ .navbar-brand > img {  // 设置 navbar logo 样式
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    width: 102.4px; //定制图片宽度
+    height: 31.2px; //定制图片高度
+}
+
+
+//---------Footer---------
+
+footer {
+    color: #FFF;
+}
+
+footer .footer-below {
+    padding: 20px 0 15px 0;
+    background-color: #273748;
+}
+
+
+//---------Flash Alert---------
+.alert {
+  margin-bottom: 0px;
+  border-radius: 0px;
+  margin-top: -35px;
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+
+//---------让内容居中---------
+ .col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+
+//---------注册登录页---------
