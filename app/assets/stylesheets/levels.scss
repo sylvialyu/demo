@@ -3,6 +3,253 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.panel-heading {
+@media (max-width: 1280px) {
+  .dashboard-content {
+    padding: 0 15px;
+  }
+}
+
+.dashboard-content {
+  margin: 25px auto;
+  max-width: 1240px;
+  min-height: 100%;
+
+  .course-content {        // 左侧框
+    margin: 0 auto 40px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 20px 30px;
+    min-height: 970px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+    display: table;
+    border-radius: 8px;
+  }
+}
+
+
+//---------右侧卡片---------
+
+.right-section {  // 整个右侧部分
+  float: right;
+  width: 300px;
+  color: #666; // 字体颜色
+  margin-bottom: 20px;
+}
+
+.right-section-card {  // 右侧每张卡片的 css 设置
+  width: 300px;
+  min-height: 180px;
+  height: auto;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+
+
+  .card-header {
+    height: 36px;
+    width: auto;
+    position: relative;
+    text-align: left
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+}
+
+.card-a {             // 卡片 a
+  min-height: 174px;
+  width: 100%;
+  display: table;
+
+  .text {
+    float: left;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 22px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: justify;
+
+    .p {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.split {                   // 卡片中 header 的部分 css 设置
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  h3 {
+    font-size: 24px;
+    color: #575a5b;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 33.6px;
+    margin-bottom: 7px;
+    margin-top: 0;
+  }
+
+}
+
+
+//---------左侧课程内容---------
+
+.left-section {      // 整个左侧部分
+  float: left;
+  width: calc(100% - 340px);
+}
+
+.dashboard-header {
+  float: left;
+  margin-bottom: 2px;
+  width: 100%;
+  height: auto;
+  display: block;
+  padding: 0;
+  position: relative;
   background-color: #FFF;
+
+  h3 {
+    font-size: 24px;
+    color: #575a5b;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    line-height: 33.6px;
+    margin-bottom: 21px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1221px) {
+  .all-course {
+    width: 840px;
+  }
+}
+
+.all-course {
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;    // 如果换成 auto 则出现横滚动轴
+  min-width: 200px;
+  max-width: 960px;
+  display: block;
+  list-style: none;
+
+  .level-card {
+    height: 250px;
+    width: 200px;
+    float: left;
+    margin: 15px 31px 40px;
+    background: #f6f8f8;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.24);
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+
+    .title-cover {
+      position: absolute;
+      z-index: 80;
+      height: 40px;
+      width: 200px;
+      margin-top: 160px;
+      background: rgba(255,255,255,0.8);
+    }
+
+    .start-btn {
+      position: absolute;
+      z-index: 95;
+      color: #333;
+      width: 200px;
+      height: 250px;
+      display: none;
+      background: rgba(255,255,255,0.8);
+
+      span {
+        display: block;
+        margin-top: 90px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90px;
+        padding: 7px;
+        font-size: 16px;
+        color: #FECB2F;
+        border: 1px solid rgba(74,73,74,0.19);
+        background: rgba(39,55,72,1);
+        border-radius: 4px;
+        font-weight: 800;
+      }
+    }
+
+    .title {
+      position: absolute;
+      z-index: 81;
+
+      h4 {
+        margin-top: 160px;
+        font-size: 15px;
+        color: #575a5b;
+        line-height: 40px;
+        padding-left: 10px;
+        letter-spacing: 1px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+      }
+    }
+
+    .course-img {
+      position: absolute;
+      z-index: 70;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+    .schedule-block {
+      border-top: 1px solid #DEDEDE;
+      position: absolute;
+      z-index: 90;
+      margin-top: 200px;
+      height: 51px;
+      width: 200px;
+      padding: 6px 10px;
+
+      .progress {
+        overflow: hidden;
+        background-color: #ccc;
+        height: 4px;
+        width: auto;
+        margin: 13px 0 5px;
+        border-radius: 4px;
+      }
+
+      p.task {
+        font-size: 13px;
+        text-align: right;
+        color: #575a5b;
+        letter-spacing: 0.8px;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .level-card:hover {
+    .title-cover {
+      display: none;
+    }
+    .start-btn {
+      display: block;
+    }
+    .title h4 {
+      color: #000
+    }
+  }
+
 }

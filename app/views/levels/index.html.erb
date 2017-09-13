@@ -1,33 +1,76 @@
-<div class="common-width">
+<div class="container-fluid">
   <div class="row">
+    <div class="dashboard-content">
 
-    <div class="col-md-9">
-      <div class="row">
-        <% @levels.each do |level| %>
-          <div class="col-md-4" style="margin-bottom: 40px;">
-            <%= link_to level_path(level) do %>
-              <% if level.image.present? %>
-                <%= image_tag(level.image.thumb.url) %>
-              <% else %>
-                <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
-              <% end %>
-            <% end %>
+      <!-- 左侧课程部分 -->
+      <div class="left-section">
+        <div class="course-content">
+
+          <!-- 课程header 部分 -->
+          <div class="dashboard-header col-xs-12">
+            <h3>Game Start From Here</h3>
+            <hr>
           </div>
-        <% end %>
-      </div>
-    </div>
 
-    <div class="col-md-3">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Board of Personal Growth</h3>
-        </div>
-        <div class="panel-body">
-          经验值：XXXX；<br>
-          战斗力：XXXX；
+          <!-- 课程内容部分 -->
+          <div class="all-course">
+            <div class="row">
+              <% @levels.each do |level| %>
+                <div class="col-md-4 col-xs-12">
+                  <%= link_to level_path(level) do %>
+
+                    <div class="level-card">
+                      <div class="title-cover"></div>
+                      <div class="start-btn">
+                        <span>ENTER</span>
+                      </div>
+                      <div class="title">
+                        <h4><%= level.title %></h4>
+                      </div>
+                      <div class="course-img">
+                        <% if level.image.present? %>
+                          <%= image_tag(level.image.thumb.url) %>
+                        <% else %>
+                          <%= image_tag("http://placehold.it/200x200&text=No Pic") %>
+                        <% end %>
+                      </div>
+                      <div class="schedule-block">
+                        <div class="percent-bar">
+                          <div class="progress" id="hover-status"></div>
+                        </div>
+                        <p class="task">X / Y task(s) completed</p>
+                      </div>
+                    </div>
+
+                  <% end %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
 
+      <!-- 右侧卡片部分 -->
+      <div class="right-section">
+
+        <!-- 卡片 a -->
+        <div class="right-section-card card-a">
+          <div class="card-header">
+            <div class="split">
+              <h3>My Growth</h3>
+            </div>
+          </div>
+          <hr>
+          <div class="card-body text">
+            <p>
+              经验值：XXXX；<br>
+              战斗力：XXXX；
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </div>
