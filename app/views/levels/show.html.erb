@@ -1,20 +1,55 @@
-<div class="frame common-width">
+<div class="course-menu" style="position: static; height: 65px; z-index: 1000;">
+  <div class="menu-content" style="padding-top: 6px;">
+    <div class="left-block hidden-xs">
+      <h1><%= link_to(@level.title, level_path(@level))%></h1>
+    </div>
+  </div>
+</div>
 
-  <h2>Learning Progress</h2>
+<div class="fixed" style="height: 0px;"></div>
+<div class="flash-block"></div>
 
-  <table class="table table-striped">
-    <% @challenges.each do |challenge| %>
-      <thead>
-        <tr>
-          <th><%= challenge.title %></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><%= link_to(challenge.subtitle, level_challenge_path(@level, challenge)) %></td>
-        </tr>
-      </tbody>
-    <% end %>
-  </table>
+<div class="course-block" id="text-content">
+  <div class="row">
 
+    <div class="assignment-content" style="border-bottom: 1px solid #dedede;">
+      <h1>My Progress</h1>
+      <p>X / Y Task(s) Completed</p>
+      <div class="small-progress-bar">
+        <div class="progress">
+          <div class="progress-bar" style="width: 325px; background-color: #bdbdbd;">
+            0%
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="syllabus">
+        <table class="table-striped">
+          <% @challenges.each do |challenge| %>
+            <thead>
+              <tr>
+                <td id="section-name" colspan="2">
+                  <h3 class="pull-left"><%= challenge.title %></h3>
+                </td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="post post-link">
+                  <div style="height: 35px; overflow: hidden;">
+                    <i class="fa fa-circle" style="color:#273748;"></i>
+                    <%= link_to(challenge.subtitle, level_challenge_path(@level, challenge), style: "margin-left: 7px;") %>
+                    <span></span> <span></span>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          <% end %>
+        </table>
+      </div>
+    </div>
+
+  </div>
 </div>

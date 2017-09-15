@@ -4,7 +4,7 @@
 
 
 //---------levels#index---------
-//---------整体---------
+//---------主页整体---------
 
 @media (max-width: 1280px) {
   .dashboard-content {
@@ -30,7 +30,7 @@
 }
 
 
-//---------右侧卡片---------
+//---------主页右侧卡片---------
 
 .right-section {  // 整个右侧部分
   float: right;
@@ -91,17 +91,18 @@
   h3 {
     font-size: 24px;
     color: #575a5b;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    line-height: 33.6px;
-    margin-bottom: 7px;
+    // font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: 'Baloo Tammudu', cursive;
+    font-weight: 100;
+    line-height: 50px;
+    margin-bottom: 0;
     margin-top: 0;
   }
 
 }
 
 
-//---------左侧课程内容---------
+//---------主页左侧课程内容---------
 
 .left-section {      // 整个左侧部分
   float: left;
@@ -121,11 +122,12 @@
   h3 {
     font-size: 24px;
     color: #575a5b;
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
-    font-weight: 300;
-    line-height: 33.6px;
-    margin-bottom: 21px;
-    margin-top: 0;
+    // font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-family: 'Baloo Tammudu', cursive;
+    font-weight: 100;
+    line-height: 21px;
+    margin-bottom: 0px;
+    margin-top: 13px;
   }
 }
 
@@ -161,7 +163,7 @@
       height: 40px;
       width: 200px;
       margin-top: 160px;
-      background: rgba(255,255,255,0.8);
+      background: rgba(255,255,255,0.85);
     }
 
     .start-btn {
@@ -179,12 +181,14 @@
         margin-left: auto;
         margin-right: auto;
         width: 90px;
-        padding: 7px;
-        font-size: 16px;
-        color: #FECB2F;
+        padding-top: 15px;
+        padding-bottom: 5px;
+        font-family: 'Baloo Tammudu', cursive;
+        font-size: 19px;
+        color: #FFF;
         border: 1px solid rgba(74,73,74,0.19);
-        background: rgba(39,55,72,1);
-        border-radius: 4px;
+        background: rgba(39,55,72,0.9);
+        border-radius: 8px;
         font-weight: 800;
       }
     }
@@ -194,14 +198,15 @@
       z-index: 81;
 
       h4 {
-        margin-top: 160px;
-        font-size: 15px;
+        margin-top: 166px;
+        font-size: 18px;
         color: #575a5b;
         line-height: 40px;
-        padding-left: 10px;
+        padding-left: 71px;
         letter-spacing: 1px;
         text-align: center;
-        font-family: 'Montserrat', sans-serif;
+        // font-family: 'Montserrat', sans-serif;
+        font-family: 'Baloo Tammudu', cursive;
       }
     }
 
@@ -259,3 +264,177 @@
 
 
 //---------levels#show---------
+
+//---------levels#show 头部 header ---------
+.course-menu {
+  display: block;
+  width: 100%;
+  height: 65px;
+  background-color: rgba(255,255,255,0.94);
+  border-bottom: 1px solid #dedede;
+  margin-top: -45px;
+
+  .menu-content {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 6px;
+
+    .left-block {
+      float: left;
+      width: auto;
+      display: block;
+      height: 100%;
+      padding-left: 15px;
+
+      h1 {
+        font-family: 'Baloo Tammudu', cursive;
+        font-size: 24px;
+
+        a {
+          text-decoration: none;
+          color: #575a5b;
+        }
+
+        a:hover {
+          text-decoration: none;
+          color: #FECB2F;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .flash-block {
+    margin-left: auto;
+    width: 100%;
+    max-width: 960px;
+  }
+}
+
+.course-block {
+  position: relative;
+  display: block;
+  margin: 20px auto 50px;
+  background-color: #fff;
+  color: #383838;
+  width: 960px;
+  min-height: 400px;
+  box-shadow: 1px 2px 4px 0 rgba(0,0,0,0.25);
+  padding: 30px 60px;
+  border-radius: 1px;
+}
+
+.assignment-content {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  height: 40px;
+  margin-bottom: 20px;
+
+  h1 {
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #383838;
+    position: relative;
+    float: left;
+    margin-top: 0;
+  }
+
+  p {
+    margin-left: 30px;
+    float: left;
+    position: relative;
+    color: #383838;
+    letter-spacing: 0;
+    font-size: 1em;
+    margin-top: 4px;
+    font-weight: 500;
+  }
+
+  .small-progress-bar {
+    float: right;
+    position: relative;
+
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 20px;
+      background-color: #e0e0e0;
+      border-radius: 4px;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,0.1)
+    }
+  }
+}
+
+.progress-bar {
+  float: left;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  box-sizing: inset 0 -1px 0 rgba(0,0,0,0.15);
+  transition: width 0.6s ease;
+}
+
+//---------levels#show 主体部分 table ---------
+.syllabus {
+  table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 55px;
+  border-collapse: separate;
+  border-radius: 2px;
+  overflow: hidden;
+
+    tr {
+      height: 45px;
+      line-height: 45px;
+    }
+  }
+
+  #section-name {
+    padding-left: 15px;
+    height: 50px;
+    border-bottom: 1px solid #f7f0f0;
+
+    h3 {
+      font-size: 18px;
+    line-height: 50px;
+    color: #383838;
+    }
+  }
+
+  .table-striped {
+    tbody {
+      tr:nth-child(odd) {
+        td {
+          background-color: #fff;
+          border-bottom: 1px solid #f7f0f0;
+        }
+      }
+    }
+  }
+
+  .post-link{
+    a {
+      color: #383838;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #FECB2F;
+    }
+
+  }
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-left: 1px;
+}

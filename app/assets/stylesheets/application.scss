@@ -61,7 +61,7 @@ flex-direction: column;
  @media (min-width: 768px) {
    .navbar {
      border-radius: 0;
-     position: relative;
+     position: sticky;
      z-index: 998;
    }
 
