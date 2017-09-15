@@ -60,8 +60,9 @@
 .level-btn {
   padding: 6px 22px 0px;
   border: solid 1px #273748;
-  background: rgba(39,55,72,0.84);
-  color: #fff;
+  // background: rgba(39,55,72,0.84);
+  background: #fff;
+  color: #273748;
   text-align: center;
   border-radius: 8px;
   font-family: 'Baloo Tammudu', cursive;
@@ -72,6 +73,8 @@
 }
 
 .level-btn:hover {
-  color: #fecb2f;
+  // color: #fecb2f;
+  color: #fff;
+  background: rgba(39,55,72,0.84);
   text-decoration: none;
 }
