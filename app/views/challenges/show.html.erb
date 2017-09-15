@@ -1,29 +1,57 @@
-<div class="frame common-width">
-
-  <h2><%= link_to(@challenge.subtitle, level_path(@level)) %></h2>
-
-  <div>
-    <% if @challenge.goal.present? %>
-      <h3>Goal</h3>
-      <hr>
-      <p><%= @challenge.goal %></p>
-    <% end %>
+<div class="course-menu" style="position: static; height: 65px; z-index: 1000;">
+  <div class="menu-content" style="padding-top: 6px;">
+    <div class="left-block hidden-xs">
+      <h1><%= link_to(@level.title, level_path(@level))%></h1>
+    </div>
   </div>
+</div>
 
-  <br>
+<div class="fixed" style="height: 0px;"></div>
+<div class="flash-block"></div>
 
-  <div>
-    <p><%= sanitize @challenge.content %></p>
+<div class="course-block" id="show-content">
+  <div class="row">
+
+    <div class="post-visitor">
+      <h4><%= @challenge.title %></h4>
+    </div>
+
+    <div class="course-post">
+
+      <div class="post-title-h1 markdown">
+        <h1><%= @challenge.subtitle %></h1>
+      </div>
+
+      <div class="post group">
+        <div class="post-content markdown">
+          <p>
+            <div>
+              <% if @challenge.goal.present? %>
+                <h2>Goal</h2>
+                <p><%= @challenge.goal %></p>
+              <% end %>
+            </div>
+            <br>
+            <div>
+              <h2>Challenge</h2>
+              <p><%= sanitize @challenge.content %></p>
+            </div>
+            <br>
+            <div>
+              <% if @challenge.task.present? %>
+                <h2>Task</h2>
+                <p><%= @challenge.task %></p>
+              <% end %>
+            </div>
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center", style="margin-top: 28px; margin-bottom: 20px;">
+        <%= link_to("Back", level_path(@level), class: "level-btn")%>
+      </div>
+
+    </div>
+
   </div>
-
-  <br>
-
-  <div>
-    <% if @challenge.task.present? %>
-      <h3>Task</h3>
-      <hr>
-      <p><%= @challenge.task %></p>
-    <% end %>
-  </div>
-
 </div>
