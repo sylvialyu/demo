@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   resource :user
 
+  resources :communities
+
 end

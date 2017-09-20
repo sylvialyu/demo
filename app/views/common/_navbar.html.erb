@@ -9,7 +9,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-left">
               <li><%= link_to('Course', levels_path, class: "nav-block", style: "margin-left: 10px;") %></li>
-              <li><%= link_to('Community', '#', class: "nav-block") %></li>
+              <li><%= link_to('Community', communities_path, class: "nav-block") %></li>
             </ul>
             <ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
               <% if !current_user %>
