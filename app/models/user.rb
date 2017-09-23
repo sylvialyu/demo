@@ -21,4 +21,8 @@ class User < ApplicationRecord
   GENDER = ["Male", "Female"]
   validates_inclusion_of :gender, :in => GENDER
 
+  validates :username, presence: true, length: {maximum: 25}
+
+  has_many :identities
+
 end

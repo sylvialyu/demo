@@ -44,6 +44,11 @@ gem 'mini_magick'
 gem 'awesome_rails_console'
 gem 'ckeditor'
 gem 'intercom-rails'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
+gem 'omniauth-github'
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
