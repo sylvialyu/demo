@@ -1,9 +1,13 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+
+  before_validation :uniq_username
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable
+
 
   mount_uploader :avatar, AvatarUploader
 
@@ -87,6 +91,12 @@ class User < ApplicationRecord
     require 'open_uri_redirections'
     open(uri, :allow_redirections => :safe) do |r|
       r.base_uri.to_s
+    end
+  end
+
+  def uniq_username(name = self.username)
+    if User.find_by(username: name)
+      self.update_attributes(username: (name + rand(1000).to_s))
     end
   end
 
