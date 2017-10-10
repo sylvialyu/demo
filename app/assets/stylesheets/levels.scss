@@ -13,7 +13,7 @@
 }
 
 .dashboard-content {
-  margin: 25px auto;
+  margin: 70px auto 25px;
   max-width: 1240px;
   min-height: 100%;
 
@@ -184,7 +184,7 @@
         padding-top: 15px;
         padding-bottom: 5px;
         font-family: 'Baloo Tammudu', cursive;
-        font-size: 19px;
+        font-size: 18px;
         color: #FFF;
         border: 1px solid rgba(74,73,74,0.19);
         background: rgba(39,55,72,0.9);
@@ -272,7 +272,7 @@
   height: 65px;
   background-color: rgba(255,255,255,0.94);
   border-bottom: 1px solid #dedede;
-  margin-top: -45px;
+  margin-top: 0px;
 
   .menu-content {
     max-width: 960px;
