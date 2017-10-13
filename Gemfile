@@ -49,7 +49,7 @@ gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'koala'
-gem 'open_uri_redirections'
+gem 'open_uri_redirections'  #可以让http跳转https不报错
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

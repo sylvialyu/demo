@@ -70,7 +70,7 @@ class User < ApplicationRecord
 					email: data.email,
 					avatar: MiniMagick::Image.open(process_uri(data.image)),
 					password: Devise.friendly_token[0,20],
-          gender: "Female",
+          gender: "Male",
 				)
 			end
 			identity = Identity.create(
