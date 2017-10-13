@@ -8,6 +8,15 @@
 
   <div class="form-inputs">
     <%= f.input :username, required: true %>
+
+    <%= f.label :gender %>
+    <% User::GENDER.each do |gender| %>
+      <label>
+        <%= f.radio_button :gender, gender %>
+        <%= t(gender, :scope => "user.gender") %>
+      </label>
+    <% end %>
+
     <%= f.input :email, required: true, autofocus: true %>
     <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
     <%= f.input :password_confirmation, required: true %>
