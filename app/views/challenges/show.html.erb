@@ -41,6 +41,7 @@
               <% if @challenge.task.present? %>
                 <h2>Task</h2>
                 <p><%= @challenge.task %></p>
+                <%= link_to("Complete My Task", tasks_path, class: "btn btn-sm btn-default") %>
               <% end %>
             </div>
           </p>

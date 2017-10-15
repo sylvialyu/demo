@@ -26,16 +26,6 @@
     </div>
 
     <div class="form-group">
-      <%= f.label :gender %>
-      <% User::GENDER.each do |gender| %>
-        <label>
-          <%= f.radio_button :gender, gender %>
-          <%= t(gender, :scope => "user.gender") %>
-        </label>
-      <% end %>
-    </div>
-
-    <div class="form-group">
       <%= f.input :email %>
       <p class="help-block">Cannot be changed once it is confirmed（目前不可更改，看是否要设为可更改）</p>
     </div>

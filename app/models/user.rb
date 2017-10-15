@@ -23,8 +23,8 @@ class User < ApplicationRecord
     end
   end
 
-  GENDER = ["Male", "Female"]
-  validates_inclusion_of :gender, :in => GENDER
+  # GENDER = ["Male", "Female"]
+  # validates_inclusion_of :gender, :in => GENDER
 
   validates :username, presence: true, length: {maximum: 25}
 
@@ -44,7 +44,7 @@ class User < ApplicationRecord
   				email: data["email"],
   				avatar: MiniMagick::Image.open(data["image"]),
   				password: Devise.friendly_token[0,20],
-          gender: "Male",
+          # gender: "Male",
   			)
   		end
 			identity = Identity.create(
@@ -70,7 +70,7 @@ class User < ApplicationRecord
 					email: data.email,
 					avatar: MiniMagick::Image.open(process_uri(data.image)),
 					password: Devise.friendly_token[0,20],
-          gender: "Male",
+          # gender: "Male",
 				)
 			end
 			identity = Identity.create(
